@@ -7,3 +7,4 @@ django-filter
 django-extensions
 Werkzeug
 psycopg2
+gunicorn
