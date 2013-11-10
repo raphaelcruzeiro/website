@@ -114,3 +114,9 @@ EMAIL_BACKEND = 'website.email_backend.SSLEmailBackend'
 EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
+
+try:
+    from local_settings import *
+except:
+    pass
+
