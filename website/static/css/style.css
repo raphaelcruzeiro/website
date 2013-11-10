@@ -711,13 +711,18 @@ ul.github i {
 
 #additional-info p {
     font-size: 11pt;
-    margin: 0;
+    margin: 10px 0 0 10px;
+    line-height: 9px;
 }
 
 #additional-info a {
     color: #000;
     font-weight: bold;
     text-decoration: underline;
+}
+
+.form-wrapper form {
+    margin: 12px 0;
 }
 
 .form-wrapper {
