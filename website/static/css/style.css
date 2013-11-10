@@ -1,0 +1,881 @@
+@font-face
+{
+    font-family: rapha;
+    src: url("../fonts/Talbot Type - Kessel105-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face
+{
+    font-family: rapha;
+    src: url("../fonts/Talbot Type - Kessel105-Thin.otf");
+    font-weight: 100;
+}
+
+@font-face
+{
+    font-family: rapha;
+    src: url("../fonts/Talbot Type - Kessel105-Light.otf");
+    font-weight: 200;
+}
+
+@font-face
+{
+    font-family: rapha;
+    src: url("../fonts/Talbot Type - Kessel105-Book.otf");
+    font-weight: 400;
+}
+
+@font-face
+{
+    font-family: rapha;
+    src: url("../fonts/Talbot Type - Kessel105-Heavy.otf");
+    font-weight: bolder;
+}
+
+body, h1, h2, h3, span, p {
+    font-family: rapha;
+}
+
+body {
+    background: rgb(253, 216, 0);
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+@-moz-document url-prefix() {
+    body {
+        font-weight: 200;
+    }
+}
+
+p {
+    font-size: 16pt;
+    line-height: 28px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    width: 100%;
+    height: 80px;
+    background: #000;
+    color: #FFF;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+}
+
+nav .rocket {
+    font-size: 35pt;
+    float: left;
+    line-height: 75px;
+    letter-spacing: 15px;
+}
+
+nav .header-wrapper {
+    float: left;
+    width: 385px;
+    font-family: rapha;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+nav h1 {
+    display: block;
+    margin: 10px 0 0 0;
+    line-height: 40px;
+    float: left;
+}
+
+h1 a {
+    color: rgb(253, 216, 0);
+    text-decoration: none;
+}
+
+nav h2 {
+    color: rgb(253, 216, 0);
+    font-size: 13pt;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: left;
+}
+
+nav .back-to-top {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav.sticky {
+    opacity: 1;
+}
+
+nav.sticky .header-wrapper {
+    opacity: 1;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    display: block;
+    padding: 0;
+    margin: 30px 0;
+}
+
+nav li {
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+nav li a {
+    font-size: 15pt;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    letter-spacing: 1px;
+}
+
+@-moz-document url-prefix() {
+    nav li a {
+        font-weight: lighter;
+    }
+}
+
+nav.sticky li a {
+    color: rgb(253, 216, 0);
+}
+
+nav li a:hover {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+nav li a.selected {
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+article {
+    overflow: hidden;
+    display: table;
+}
+
+.headline {
+    width: 880px;
+    margin: 0 auto;
+    line-height: 25px;
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+}
+
+.no-blur {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+    transition: 0.85.s ease-in-out;
+    -webkit-transition: 0.85s ease-in-out;
+}
+
+.headline h1, .headline h2 {
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    line-height: 5px;
+}
+
+.headline h2 {
+    font-size: 45pt;
+    font-weight: 200;
+    line-height: 65px;
+    margin: 0 0 15px 0;
+}
+
+@-moz-document url-prefix() {
+    .headline h2 {
+        font-weight: 100;
+    }
+}
+
+.headline h1 {
+    text-transform: uppercase;
+    font-size: 63pt;
+    line-height: 100px;
+    margin: 0;
+}
+
+.center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.wrapper {
+    width: 931px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    text-transform: none;
+    font-weight: lighter;
+    font-size: 38pt;
+}
+
+#about h2 strong {
+    text-transform: uppercase;
+    font-size: 60pt;
+    font-weight: bolder;
+    line-height: 72px;
+    letter-spacing: -4px;
+}
+
+#about .cogs {
+    font-size: 165pt;
+    color: white;
+    float: right;
+    margin: 15px 0;
+}
+
+#about .split, #skills .split {
+    width: 440px;
+    float: left;
+}
+
+#about .left, #skills .left {
+    margin: 0 25px 0 0;
+}
+
+#about .right, #skills .right {
+    margin: 0 0 0 25px;
+}
+
+#about .wrapper {
+    height: 255px;
+}
+
+.main article {
+    width: 100%;
+    height: 829px;
+}
+
+.arrow {
+    color: white;
+    font-size: 28pt;
+    transition: 0.25s ease-in-out;
+}
+
+.main article.highlight {
+    display: table;
+    background: url(../imgs/brandenburger.jpg) no-repeat 50% 50%;
+    background-size: 100%;
+}
+
+.cream {
+    background: white;
+}
+
+.yellow {
+    background: rgb(255, 222, 0);
+    height: 500px !important;
+    display: block;
+}
+
+.v-center {
+    margin: 0 auto;
+}
+
+.arrow-wrapper {
+    width: 100%;
+}
+
+@keyframes blink {
+    0% {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    33% {
+        background: rgb(255, 222, 0);
+        color: rgb(0, 0, 0);
+    }
+    100% {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    33% {
+        background: rgb(255, 222, 0);
+        font-size: 32pt;
+        color: rgb(0, 0, 0);
+    }
+    100% {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes blink-font {
+    0% {
+        color: rgb(0, 0, 0);
+    }
+    33% {
+        color: rgb(255, 222, 0);
+    }
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes blink-font {
+    0% {
+        color: rgb(0, 0, 0);
+    }
+    33% {
+        color: rgb(255, 222, 0);
+    }
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+.semi-circle {
+    position: fixed;
+    z-index: 45;
+    bottom: -15px;
+    left: 50%;
+    width: 150px !important;
+    height: 75px !important;
+    background: black;
+    margin: 0 0 0 -75px;
+    border-radius: 150px 150px 0 0;
+    border: none;
+    outline: none;
+    transition: 0.5s ease-in-out;
+    -webkit-animation: blink 1s 4;
+    animation: blink 1s 4;
+}
+
+.semi-circle:hover .arrow {
+    font-size: 32pt;
+}
+
+.narrow {
+    min-width: 1265px;
+    height: 250px !important;
+}
+
+.bg2 {
+    display: table;
+    background: url(../imgs/warsaw.jpg) no-repeat 50% -200px;
+    background-size: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 931px;
+    height: 630px;
+}
+
+.container h2 {
+    margin: 25px 5% 0 0;
+    width: 45%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.bg2 h2 {
+    float: right;
+    font-size: 33pt;
+    color: #FFF;
+}
+
+.yellow .left {
+    width: 38.8%;
+    float: left;
+}
+
+.yellow .right {
+    width: 61.2%;
+    float: right;
+}
+
+.yellow h2 {
+    font-size: 35pt;
+    font-weight: 200;
+    text-transform: none;
+    width: 100%;
+}
+
+@-moz-document url-prefix() {
+    .yellow h2 {
+        font-weight: 100;
+    }
+}
+
+.yellow ul {
+    padding: 0;
+    list-style: none;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+.yellow li {
+    display: inline;
+    margin: 3px;
+}
+
+.yellow li a {
+    color: #444;
+    text-decoration: none;
+    font-size: 30pt;
+}
+
+.yellow  li a:hover {
+    color: #ff5555;
+    transition: 0.5s ease-in-out;
+}
+
+.yellow img {
+    margin: 95px auto 30px;
+    border-radius: 50%;
+    width: 220px;
+    display: block;
+}
+
+input, textarea {
+    width: 89%;
+    font-size: 12pt !important;
+    font-family: rapha;
+    font-style: normal;
+    height: 25px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    resize: none;
+    padding: 5px;
+}
+
+textarea {
+    height: 200px;
+}
+
+button[type=submit] {
+    margin: 0 45px 0 0;
+    float: right;
+    background: #444;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 3px;
+    font-weight: lighter;
+    text-decoration: none;
+    -moz-box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+    font-family: rapha;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+button[type=submit]:hover {
+    background: #ff5555;
+    border-color: #ff5555;
+    transition: 0.2s ease-in-out;
+}
+
+button[type=submit] i {
+    margin: 0 0 0 10px;
+}
+
+.line {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 2px;
+    position: relative;
+    background: url(line-h.png) 0 0 repeat-x;
+}
+
+.table {
+    display: table;
+}
+
+.portifolio-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+ul.portifolio  {
+    padding: 0;
+}
+
+/*ul.portifolio p {
+    display: block;
+    font-size: 10pt;
+}
+
+ul.portifolio .content {
+    clear: both;
+    margin: 15px;
+}
+
+ul.portifolio .stripe {
+    height: 75px;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+ul.portifolio .mask {
+    position: relative;
+    display: block;
+    width: 285px;
+    height: 285px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+@keyframes play {
+    0% {
+        color: red;
+    }
+    33% {
+        color: black;
+    }
+    100% {
+        color: red;
+    }
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes play {
+    0% {
+        color: red;
+    }
+    33% {
+        color: black;
+    }
+    100% {
+        color: red;
+    }
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+.play {
+    position: absolute;
+    z-index: 40;
+    text-align: center;
+    color: black;
+    font-size: 55pt;
+    opacity: 0.6;
+    width: 140px;
+    height: 140px;
+    top: 50%;
+    margin-top: -73px;
+    left: 50%;
+    margin-left: -69px;
+    animation: play 2s infinite;
+    -webkit-animation: play 2s infinite;
+    cursor: pointer;
+    line-height: 140px !important;
+    letter-spacing: -15px;
+}
+
+ul.portifolio .mask img {
+    width: 285px;
+}
+
+li.portifolio-item {
+    display: block;
+    width: 100%;
+    float: left;
+    margin: -151px 0;
+    padding: 0;
+    top: 50%;    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+li.portifolio-item .icon {
+    font-size: 250pt;
+    color: #ff5555;
+    text-decoration: none;
+}
+
+li.portifolio-item.current {
+    opacity: 1;
+    z-index: 20;
+}
+
+li.portifolio-item .left {
+    float: left;
+    width: 35%
+}
+
+li.portifolio-item .right {
+    float: left;
+    width: 65%;
+}
+
+ul.github {
+    float: right;
+}
+
+ul.github li {
+    display: inline;
+    margin: 0 5px;
+    color: #aaa;
+    width: 27;
+}
+
+ul.github a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+ul.github a:hover {
+    color: #ff5555;
+    transition: 0.5s ease-in-out;
+}
+*/
+
+ul.portifolio {
+    padding: 0;
+    height: 600px;
+}
+
+.portifolio-item {
+    width: 33.33%;
+    height: 250px;
+    float: left;
+    font-size: 12pt !important;
+    list-style: none;
+    margin: 35px 0;
+}
+
+.portifolio-item .content {
+    width: 223px;
+    margin: 0 auto;
+}
+
+.portifolio-item h3 {
+    margin: 10px 0 0 0;
+}
+
+.portifolio-item p {
+    font-size: 10pt;
+    line-height: 21px;
+    clear: both;
+}
+
+ul.github {
+    list-style: none;
+    padding: 0;
+    float: right;
+    margin: 10px 0;
+    height: 17px;
+}
+
+ul.github li {
+    float: left;
+}
+
+ul.github {
+    color: #444;
+}
+
+ul.github a {
+    color: inherit;
+}
+
+ul.github i {
+    margin: 0 5px;
+}
+
+#additional-info p {
+    font-size: 11pt;
+    margin: 0;
+}
+
+#additional-info a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.form-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    display: table;
+}
+
+.relative {
+    position: relative;
+}
+
+.arrow-right, .arrow-left {
+    font-size: 30pt;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    margin: -20px 0;
+    transition: 0.2s ease-in-out;
+}
+
+.arrow-left {
+    left: -40px;
+}
+
+.arrow-right {
+    right: -40px;
+}
+
+.curtain {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    left: 0%;
+    top: 0%;
+    opacity: 0.6;
+    display: none;
+}
+
+.modal-wrapper {
+    cursor: pointer;
+    position: fixed;
+    display: none;
+    z-index: 60;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+.modal {
+    position: relative;
+    vertical-align: middle;
+    width: 425px;
+    background: white;
+    margin: 180px auto;
+    border-radius: 5px;
+    padding: 30px 0 30px 30px;
+}
+
+.modal .bolt {
+    font-size: 46pt;
+    float: left;
+    margin: 0 30px 0 0;
+}
+
+.modal button {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    outline: none;
+    font-size: 20pt;
+    line-height: 34px;
+}
+
+.modal p {
+    margin: 0;
+}
+
+h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#skills {
+    background: #000;
+    color: white;
+}
+
+#skills h1, #skills h2, #skills h3, #skills p {
+    color: white;
+}
+
+#skills h2 {
+    font-weight: lighter;
+    font-size: 20pt;
+}
+
+#skills h2 strong {
+    font-size: 60pt;
+}
+
+#skills p {
+    clear: both;
+}
+
+#skills .wrapper {
+    height: 255px;
+}
+
+.wrench {
+    font-size: 135pt;
+    float: right;
+    margin: 12px 0;
+}
+
+ul.general {
+    clear: both;
+    list-style: none;
+    width: 100%;
+}
+
+ul.general li {
+    float: left;
+    width: 50%;
+}
+
+ul.specifics li {
+    float: none;
+}
+
+.inverse {
+    background: rgb(252, 212, 0);
+}
+
+.inverse a, .inverse h2 {
+    color: black !important;
+}
+
+.inverse .selected, .inverse a:hover {
+    color: white !important;
+}
+
+.inverse .rocket {
+    color: white;
+}

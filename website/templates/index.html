@@ -1,0 +1,207 @@
+{% load compress %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=1280" initial-scale="1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        {% compress css %}
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        {% endcompress %}
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="curtain">
+        </div>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <i class="fa fa-bolt bolt"></i>
+                <div class="msg"></div>
+                <button><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <nav>
+            <div class="wrapper">
+                <div class="header-wrapper">
+                    <span class="fa fa-rocket rocket"></span>
+                    <h1><a href="#">Raphael Cruzeiro</a></h1>
+                    <h2>Software Developer</h2>
+                </div>
+                <ul>
+                    <li><a href="#" id="aAbout">About</a></li>
+                    <li><a href="#" id="aSkills">Skills</a></li>
+                    <li><a href="#" id="aPortifolio">Portifolio</a></li>
+                    <li><a href="#" id="aContact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="arrow-wrapper">
+            <button class="semi-circle arrow"><i class="arrow fa fa-chevron-down"></i></button>
+        </div>
+        <div class="main">
+            <article id="main" class="highlight resize">
+                <div class="center">
+                    <div class="headline">
+                        <h2>Hello, my name is</h2>
+                        <h1>Raphael Cruzeiro</h1>
+                        <h2>and I am a software developer</h2>
+                    </div>
+                </div>
+            </article>
+            <article id="about" class="resize">
+                <div class="center">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="split left">
+                                <div class="fa fa-cogs cogs"></div>
+                            </div>
+                            <div class="split right">
+                                <h2>I like to <strong>build things!</strong></h2>
+                            </div>
+                        </div>
+                        <p>I am a generalist programmer, working from web development to iOS programming and desktop applications. I also consider myself to have an eye for interface design and product usability.</p>
+                        <p>My work comprises of the whole software development stack, from server configuration and backend coding to building an awesome frontend and even eventually creating an Android or iOS app. </p>
+                        <p>I am passionate for the beauty of software development and have a strong believe that it is more than just an engineering work, it is a form of art.</p>
+                    </div>
+                </div>
+            </article>
+            <article id="skills" class="resize">
+                <div class="center">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="split left">
+                                <div class="fa fa-wrench wrench"></div>
+                            </div>
+                            <div class="split right">
+                                <h2>What I use to <strong>build things:</strong></h2>
+                            </div>
+                        </div>
+                        <p>My applications are usually coded in Python using the amazing Django web framework. This powerful combination enables me to deliver high quality software with considerably less development time than the alternatives.</p>
+                        <p>On the frontend I like to use the new AngularJS framework to structure my application and create an awesome UX.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="cream resize" id="portifolio">
+                <div class="center">
+                    <div class="container">
+                        <h2>Some stuff that I've built</h2>
+                        <ul class="portifolio">
+                            <li class="portifolio-item">
+                                <div class="content">
+                                    <h3><a href="http://cacho.la" target="_blank">Cachola</a></h3>
+                                    <ul class="github"></ul>
+                                    <p>A virtual blackboard and social tool where you can place and annotate content from all over the web and share it amongst your peers.</p>
+                                    <p>This app relies heavily on modern Javascript and it's built with the new AngularJS framework.</p>
+                                </div>
+                            </li>
+                            <li class="portifolio-item" gh-name="webimage">
+                                <div class="content">
+                                    <h3><a href="https://github.com/raphaelcruzeiro/webimage" target="_blank">Webimage</a></h3>
+                                    <ul class="github">
+                                        <li><i class="fa fa-github fa fa-large"></i></li>
+                                        <li><i class="fa fa-code-fork fa fa-large"></i><span class="forks">0</span></li>
+                                        <li><i class="fa fa-star fa fa-large"></i><span class="stars">0</span></li>
+                                    </ul>
+                                    <p>A simple command line program that uses webkit to render a preview image from a web page. A live demo that has been wrapped with a web interface can be found <a href="http://previewtool.raphaelcruzeiro.com/" target="_blank">here.</a></p>
+                                </div>
+                            </li>
+                            <li class="portifolio-item" gh-name="PdfAnnotator-for-iPad">
+                                <div class="content">
+                                    <h3><a href="https://github.com/raphaelcruzeiro/PdfAnnotator-for-iPad" target="_blank">iPad PDF Annotator</a></h3>
+                                    <ul class="github">
+                                        <li><i class="fa fa-github fa fa-large"></i></li>
+                                        <li><i class="fa fa-code-fork fa fa-large"></i><span class="forks">0</span></li>
+                                        <li><i class="fa fa-star fa fa-large"></i><span class="stars">0</span></li>
+                                    </ul>
+                                    <p>A proof of concept for an iOS PDF annotation tool developed for the first iPad back in 2011.</p>
+                                    <p>This was a pet project that I used to get up to speed with iOS development and explore some of Apple's low level APIs like CoreGraphics.</p>
+                                </div>
+                            </li>
+                            <li class="portifolio-item" gh-name="Face-Detector">
+                                <div class="content">
+                                    <h3><a href="https://github.com/raphaelcruzeiro/Face-Detector" target="_blank">Face Detector</a></h3>
+                                    <ul class="github">
+                                        <li><i class="fa fa-github fa fa-large"></i></li>
+                                        <li><i class="fa fa-code-fork fa fa-large"></i><span class="forks">0</span></li>
+                                        <li><i class="fa fa-star fa fa-large"></i><span class="stars">0</span></li>
+                                    </ul>
+                                    <p>A Python C extesion that uses OpenCV to search for human faces in images.</p>
+                                    <p>I also built a small Django project that uses this module to tag faces on images. The demo can be found <a href="http://facedetector.raphaelcruzeiro.com/" target="_blank">here</a>.</p>
+                                </div>
+                            </li>
+                            <li class="portifolio-item" gh-name="nginx-monitoring-tool">
+                                    <div class="content">
+                                        <h3><a href="https://github.com/raphaelcruzeiro/nginx-monitoring-tool" target="_blank">Nginx Monitoring tool</a></h3>
+                                        <ul class="github">
+                                            <li><i class="fa fa-github fa fa-large"></i></li>
+                                            <li><i class="fa fa-code-fork fa fa-large"></i><span class="forks">0</span></li>
+                                            <li><i class="fa fa-star fa fa-large"></i><span class="stars">0</span></li>
+                                        </ul>
+                                        <p>A tool for monitoring test servers. Though I don't use this anymore, it was extremelly useful for me and for the team I had been working with for one year until we replaced it with other tools (i.e. the Supervisor web panel and New Relic).</p>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <article class="narrow bg2" id="contact">
+                <div class="container center narrow">
+                    <h2>Something...</h2>
+                </div>
+            </article>
+            <article class="yellow">
+                <div class="v-center">
+                    <div class="container">
+                        <div class="contact-wrapper">
+                            <div class="left">
+                                <img src="/static/imgs/me.jpg" alt="Raphael Cruzeiro" />
+                                <ul>
+                                    <li><a href="https://github.com/raphaelcruzeiro" target="_blank" class="fa fa-github fa fa-2x"></a></li>
+                                    <li><a href="https://twitter.com/rcdeveloper" target="_blank" class="fa fa-twitter fa fa-2x"></a></li>
+                                    <li><a href="http://www.linkedin.com/pub/raphael-cruzeiro/57/b49/93a" target="_blank" class="fa fa-linkedin fa fa-2x"></a></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <div class="form-wrapper">
+                                    <h2>Contact me</h2>
+                                    <div id="additional-info">
+                                        <p>You can find me on freenode as <strong>raphaelcruzeiro</strong>.</p>
+                                        <p>I also have some <a href="http://www.slideshare.net/raphaelcruzeiro" target="_blank">slides on Slideshare</a></p>
+                                    </div>
+                                    <form>
+                                        <input type="email" name="email" placeholder="Your email" />
+                                        <input type="text" name="subject" placeholder="Subject" />
+                                        <textarea placeholder="Message" name="message"></textarea>
+                                        <button type="submit">Send<i class="fa fa-envelope"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        <div/>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        {% compress js %}
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/parallax.js"></script>
+        <script src="/static/js/main.js"></script>
+        {% endcompress %}
+
+    </body>
+</html>
