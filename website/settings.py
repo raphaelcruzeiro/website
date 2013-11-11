@@ -110,7 +110,7 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'website/templates'),
 )
 
-COMPRESS_CSS_FILTERS = ['compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_FILTERS += ['compressor.filters.cssmin.CSSMinFilter']
 
 EMAIL_BACKEND = 'website.email_backend.SSLEmailBackend'
 EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
