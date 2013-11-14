@@ -22,7 +22,7 @@ class Index(TemplateView):
 
         context = super(Index, self).get_context_data(**kwargs)
         if 'cover' in self.request.GET:
-            css_name = '%scss/covers/%s.css' % self.request.GET['cover']
+            css_name = '%scss/covers/%s.css' % (STATIC_URL, self.request.GET['cover'])
             if css_name in covers:
                 context['cover'] = css_name
                 return context
