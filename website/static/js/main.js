@@ -146,7 +146,6 @@ var resizer = (function(){
                 '-ms-filter' : 'blur(' + blur + 'px)',
                 'filter' : 'blur(' + blur + 'px)'
             });
-            console.log('blur(' + blur + 'px);');
         });
         $('.bg2').parallax("50%", 0.5, true);
     };
@@ -214,7 +213,6 @@ var navBar = (function(){
     };
     var bindArrow = function() {
         $('.semi-circle').click(function(ev) {
-            console.log('arrow');
             var article = navControl.findCurrentArticle();
             article = article.next();
             var id = article.attr('id');
