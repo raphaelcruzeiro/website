@@ -278,7 +278,6 @@ article {
 
 .main article.highlight {
     display: table;
-    background: url(../imgs/brandenburger.jpg) no-repeat 50% 50%;
     background-size: 100%;
 }
 
