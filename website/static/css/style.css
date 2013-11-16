@@ -902,3 +902,14 @@ ul.specifics li {
     top: calc(50% - 253px);
     left: calc(50% - 405px);
 }
+
+.input-container.error input, .input-container.error textarea {
+    border: solid 1px rgb(255, 70, 70);
+}
+
+.input-container.error:after {
+    position: absolute;
+    content: "\f06a";
+    color: red;
+    font-family: FontAwesome;
+}

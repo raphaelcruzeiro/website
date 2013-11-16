@@ -304,6 +304,28 @@ var contactForm = (function(){
     var init = function() {
         $('.yellow').find('form').submit(function(ev){
             ev.preventDefault();
+            $('.input-container').removeClass('error');
+            var error = false;
+
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            if (!$('textarea[name=message]').val().length) {
+                error = true;
+                $('textarea[name=message]').closest('.input-container').addClass('error');
+            }
+
+            if (!$('input[name=subject]').val().length) {
+                error = true;
+                $('input[name=subject]').closest('.input-container').addClass('error');
+            }
+
+            if (!re.test($('input[name=email]').val())) {
+                error = true;
+                $('input[name=email]').closest('.input-container').addClass('error');
+            }
+
+            if (error) return;
+
             var data = $(this).serialize();
             $.post('/api/contact/', data, function(response) {
                 $('.yellow').find('form').find('input, textarea').val('');

@@ -37,6 +37,7 @@ class Contact(generics.CreateAPIView):
 
     def create(self, request):
         serializer = serializers.ContactSerializer(request.DATA)
+
         email = EmailMessage(
             serializer.data['subject'],
             serializer.data['message'],
