@@ -678,7 +678,7 @@ ul.portifolio {
     margin: 10px 0 0 0;
 }
 
-.portifolio-item p {
+.portifolio-item p, .portifolio-item a {
     font-size: 10pt;
     line-height: 21px;
     clear: both;
@@ -771,7 +771,7 @@ ul.github i {
     display: none;
 }
 
-.modal-wrapper {
+.modal-wrapper, .video-wrapper {
     cursor: pointer;
     position: fixed;
     display: none;
@@ -883,4 +883,18 @@ ul.specifics li {
 
 .inverse .rocket {
     color: white;
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-player iframe {
+    position: absolute;
+    width: 810px;
+    height: 506px;
+    top: calc(50% - 253px);
+    left: calc(50% - 405px);
 }

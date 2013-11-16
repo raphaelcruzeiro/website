@@ -22,11 +22,15 @@ var isMobile = {
 
 var modal = (function(){
     var init = function () {
-        $('.modal').find('button').click(function(ev){
+
+        var close = function(ev) {
             ev.preventDefault();
             $('.curtain').fadeOut();
             $('.modal-wrapper').fadeOut();
-        });
+        };
+
+        $('.modal').find('button').click(close);
+        $('.modal-wrapper').click(close);
     };
 
     var show = function(str) {
@@ -271,6 +275,31 @@ var github = (function(){
     };
 })();
 
+var video = (function(){
+    var init = function(){
+        $('a.video').click(function(ev) {
+            ev.preventDefault();
+            var id = /\d+/.exec($(this).attr('href'));
+            var url = 'http://player.vimeo.com/video/' + id;
+            var iframe = '<iframe width="810" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+            $('.video-player').empty().append(iframe);
+            $('.video-player').find('iframe').attr('src', url);
+            $('.curtain').fadeIn();
+            $('.video-wrapper').fadeIn();
+        });
+        $('.video-player').click(function(ev) {
+            ev.preventDefault();
+            $('.curtain').fadeOut();
+            $('.video-wrapper').fadeOut();
+            $('.video-player').empty();
+        });
+    };
+
+    return {
+        init: init
+    }
+})();
+
 var contactForm = (function(){
     var init = function() {
         $('.yellow').find('form').submit(function(ev){
@@ -295,5 +324,6 @@ $(document).ready(function(){
     github.init();
     contactForm.init();
     modal.init();
+    video.init();
     $('.headline').addClass('no-blur');
 });
