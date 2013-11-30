@@ -6,7 +6,7 @@ from rest_framework import generics, views
 import serializers
 
 
-
+import random
 import os
 from settings import STATIC_ROOT, STATICFILES_DIRS, DEBUG, STATIC_URL
 static_dir = STATIC_ROOT
@@ -19,6 +19,8 @@ covers = ['%scss/covers/%s' % (STATIC_URL, c) for c in os.listdir(os.path.join(s
 
 class Index(TemplateView):
     template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
         context = super(Index, self).get_context_data(**kwargs)
         if 'cover' in self.request.GET:
             css_name = '%scss/covers/%s.css' % (STATIC_URL, self.request.GET['cover'])
