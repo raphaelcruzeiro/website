@@ -6,20 +6,19 @@ from rest_framework import generics, views
 import serializers
 
 
+
+import os
+from settings import STATIC_ROOT, STATICFILES_DIRS, DEBUG, STATIC_URL
+static_dir = STATIC_ROOT
+
+if DEBUG:
+    static_dir = STATICFILES_DIRS[0]
+
+covers = ['%scss/covers/%s' % (STATIC_URL, c) for c in os.listdir(os.path.join(static_dir, 'css/covers')) if c.endswith('.css')]
+
+
 class Index(TemplateView):
     template_name = 'index.html'
-
-    def get_context_data(self, **kwargs):
-        import os
-        import random
-        from settings import STATIC_ROOT, STATICFILES_DIRS, DEBUG, STATIC_URL
-        static_dir = STATIC_ROOT
-
-        if DEBUG:
-            static_dir = STATICFILES_DIRS[0]
-
-        covers = ['%scss/covers/%s' % (STATIC_URL, c) for c in os.listdir(os.path.join(static_dir, 'css/covers')) if c.endswith('.css')]
-
         context = super(Index, self).get_context_data(**kwargs)
         if 'cover' in self.request.GET:
             css_name = '%scss/covers/%s.css' % (STATIC_URL, self.request.GET['cover'])
@@ -27,8 +26,9 @@ class Index(TemplateView):
                 context['cover'] = css_name
                 return context
 
-        random.shuffle(covers)
-        context['cover'] = covers[0]
+        shuffled = covers[:]
+        random.shuffle(shuffled)
+        context['cover'] = shuffled[0]
         return context
 
 
