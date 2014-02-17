@@ -282,7 +282,7 @@ article {
 
 .main article.highlight {
     display: table;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .cream {
