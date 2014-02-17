@@ -1,4 +1,4 @@
 .main article.highlight {
     background: url(../../imgs/brandenburger.jpg) no-repeat 50% 50%;
-    background-size: 100%;
+    background-size: cover;
 }
